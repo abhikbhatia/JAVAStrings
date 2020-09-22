@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    import jenkins.model.*
+	jenkins = Jenkins.instance
+	
+	agent any
     environment {
         ENV_NAME = "${env.BRANCH_NAME}"
     }
